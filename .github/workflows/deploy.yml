@@ -8,7 +8,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout and Test Code
       - uses: actions/checkout@v2
       - run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
       - run: docker build -t devvyky/react-test -f Dockerfile.dev .
